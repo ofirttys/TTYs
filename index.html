@@ -59,6 +59,37 @@
       line-height: 1.2;
     }
     
+    .countdown {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      gap: 20px;
+    }
+    
+    .countdown-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 80px;
+    }
+    
+    .countdown-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #333333;
+      text-shadow: 1px 1px 4px rgba(255,255,255,0.4);
+      font-family: Montserrat, sans-serif;
+    }
+    
+    .countdown-label {
+      font-size: 0.9rem;
+      color: #555555;
+      text-transform: uppercase;
+      margin-top: 5px;
+      font-family: Lato, sans-serif;
+      letter-spacing: 1px;
+    }
+    
     @media (max-width: 767px) {
       .coming-soon {
         font-size: 3rem;
@@ -66,6 +97,14 @@
       
       .logo-text {
         font-size: 1.25rem;
+      }
+      
+      .countdown-value {
+        font-size: 2rem;
+      }
+      
+      .countdown-item {
+        min-width: 60px;
       }
     }
     
@@ -77,9 +116,21 @@
       .logo-text {
         font-size: 1rem;
       }
+      
+      .countdown-value {
+        font-size: 1.5rem;
+      }
+      
+      .countdown-item {
+        min-width: 50px;
+      }
+      
+      .countdown {
+        gap: 10px;
+      }
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
@@ -88,6 +139,51 @@
     </div>
     
     <div class="coming-soon">Coming Soon</div>
+    
+    <div class="countdown">
+      <div class="countdown-item">
+        <div id="days" class="countdown-value">00</div>
+        <div class="countdown-label">Days</div>
+      </div>
+      <div class="countdown-item">
+        <div id="hours" class="countdown-value">00</div>
+        <div class="countdown-label">Hours</div>
+      </div>
+      <div class="countdown-item">
+        <div id="minutes" class="countdown-value">00</div>
+        <div class="countdown-label">Minutes</div>
+      </div>
+      <div class="countdown-item">
+        <div id="seconds" class="countdown-value">00</div>
+        <div class="countdown-label">Seconds</div>
+      </div>
+    </div>
   </div>
+
+  <script>
+    const countDownDate = new Date("May 17, 2025 12:00:00").getTime();
+
+    const countdownTimer = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+      document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+      document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+      document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+
+      if (distance < 0) {
+        clearInterval(countdownTimer);
+        document.getElementById("days").innerText = "00";
+        document.getElementById("hours").innerText = "00";
+        document.getElementById("minutes").innerText = "00";
+        document.getElementById("seconds").innerText = "00";
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
