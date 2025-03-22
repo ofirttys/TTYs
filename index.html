@@ -32,30 +32,32 @@
       margin-bottom: 40px;
     }
     
-    .logo img {
-      height: 80px;
-      width: auto;
+    .logo-text {
+      color: white;
+      font-size: 24px;
+      font-weight: 700;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     }
     
     .coming-soon {
-      font-size: 92px;
+      font-size: 60px;
       font-weight: 700;
-      color: white;
+      color: #333333;
       text-transform: uppercase;
-      letter-spacing: 5px;
-      line-height: 1.1;
-      margin-bottom: 20px;
+      letter-spacing: 3px;
+      line-height: 1.2;
+      text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.3);
     }
     
     @media (max-width: 767px) {
       .coming-soon {
-        font-size: 60px;
+        font-size: 45px;
       }
     }
     
     @media (max-width: 480px) {
       .coming-soon {
-        font-size: 40px;
+        font-size: 32px;
       }
     }
   </style>
@@ -64,8 +66,7 @@
 <body>
   <div class="container">
     <div class="logo">
-      <!-- logo TBD -->
-      <span style="color: white; font-size: 24px; font-weight: 700;">TTY SYSTEMS</span>
+      <span class="logo-text">TTY systems</span>
     </div>
     
     <div class="coming-soon">Coming Soon</div>
