@@ -1,30 +1,74 @@
+<!DOCTYPE html>
 <html>
-
 <head>
   <title>TTY Systems</title>
-
   <style>
-    body {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("xz.jpg");
-      background-position: 50% 50%;
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    body {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("xz.jpg");
+      background-position: 50% 50%;
+      background-size: cover;
+      background-attachment: fixed;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      color: white;
     }
-    h1 {
+    
+    .container {
+      width: 100%;
+      max-width: 800px;
+      padding: 80px 30px;
       text-align: center;
     }
+    
+    .logo {
+      margin-bottom: 40px;
+    }
+    
+    .logo img {
+      height: 80px;
+      width: auto;
+    }
+    
+    .coming-soon {
+      font-size: 92px;
+      font-weight: 700;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    
+    @media (max-width: 767px) {
+      .coming-soon {
+        font-size: 60px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .coming-soon {
+        font-size: 40px;
+      }
+    }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
-<body class="u-body">
-
-  <div>
-    <h1 class="u-custom-font">Coming Soon</h1>
+<body>
+  <div class="container">
+    <div class="logo">
+      <!-- logo TBD -->
+      <span style="color: white; font-size: 24px; font-weight: 700;">TTY SYSTEMS</span>
+    </div>
+    
+    <div class="coming-soon">Coming Soon</div>
   </div>
-
 </body>
 </html>
