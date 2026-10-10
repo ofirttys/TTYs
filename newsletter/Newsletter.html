@@ -3,14 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fertility Preservation Newsletter - November 2025</title>
+    <title>Fertility Preservation Newsletter - October 2026</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -19,7 +15,7 @@
             min-height: 100vh;
             padding: 20px;
         }
-        
+
         .newsletter-container {
             max-width: 800px;
             margin: 0 auto;
@@ -28,7 +24,7 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
             overflow: hidden;
         }
-        
+
         .header {
             background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
             color: white;
@@ -36,31 +32,17 @@
             text-align: center;
             position: relative;
         }
-        
+
         .header::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="30" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="60" cy="70" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="30" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
         }
-        
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .header .subtitle {
-            font-size: 1.1em;
-            opacity: 0.9;
-            position: relative;
-            z-index: 1;
-        }
-        
+
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; position: relative; z-index: 1; }
+        .header .subtitle { font-size: 1.1em; opacity: 0.9; position: relative; z-index: 1; }
+
         .badge {
             display: inline-block;
             background: rgba(255,255,255,0.2);
@@ -71,11 +53,9 @@
             position: relative;
             z-index: 1;
         }
-        
-        .content {
-            padding: 40px;
-        }
-        
+
+        .content { padding: 40px; }
+
         .intro {
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             padding: 25px;
@@ -83,46 +63,9 @@
             margin-bottom: 30px;
             border-left: 5px solid #4CAF50;
         }
-        
-        .intro p {
-            font-size: 1.1em;
-            color: #555;
-            margin: 0 0 15px 0;
-        }
-        
-        .intro ul {
-            list-style: none;
-            padding: 0;
-            margin: 15px 0;
-        }
-        
-        .intro li {
-            padding: 5px 0;
-            color: #555;
-            font-size: 1.0em;
-        }
-        
-        .intro li:before {
-            content: "✓ ";
-            color: #4CAF50;
-            font-weight: bold;
-            margin-right: 8px;
-        }
-        
-		.tip-sheet-grid {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			gap: 15px;
-			margin: 15px 0;
-		}
 
-		.tip-sheet-grid img {
-			width: 100%;
-			height: auto;
-			border-radius: 8px;
-			box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-		}
-        
+        .intro p { font-size: 1.1em; color: #555; margin: 0; }
+
         .section {
             margin-bottom: 35px;
             background: #fafafa;
@@ -131,310 +74,182 @@
             border: 1px solid #eee;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
-        .section:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .section-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
+
+        .section:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+        .section-header { display: flex; align-items: center; margin-bottom: 20px; }
+
         .section-icon {
-            width: 40px;
-            height: 40px;
+            width: 40px; height: 40px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             margin-right: 15px;
-            font-size: 1.5em;
-            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            font-size: 1.2em;
             color: white;
+            flex-shrink: 0;
         }
-        
-        .section h2 {
-            margin: 0;
-            font-size: 1.4em;
-            color: #333;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-        
-        .stat-item {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .stat-number {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: #4CAF50;
-            margin-bottom: 5px;
-        }
-        
-        .stat-label {
-            font-size: 0.9em;
-            color: #666;
-        }
-        
+
+        .icon-guidelines { background: linear-gradient(135deg, #feca57, #ff9ff3); }
+        .icon-event { background: linear-gradient(135deg, #5f27cd, #341f97); }
+        .icon-news { background: linear-gradient(135deg, #ff7b7b, #ff5757); }
+        .icon-numbers { background: linear-gradient(135deg, #54a0ff, #2e86de); }
+        .icon-audit { background: linear-gradient(135deg, #4ecdc4, #44a08d); }
+        .icon-research { background: linear-gradient(135deg, #feca57, #ff9f43); }
+        .icon-meeting { background: linear-gradient(135deg, #00d2d3, #54a0ff); }
+
+        .section h2 { color: #333; font-size: 1.4em; margin: 0; font-weight: 600; }
+
+        .section h4 { color: #4CAF50; font-size: 1.1em; margin: 20px 0 8px; }
+
+        .section p + p { margin-top: 12px; }
+
         .highlight-box {
-            background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .highlight-box p { margin: 0; font-weight: 500; color: #856404; }
+
+        .feature-list { list-style: none; padding: 0; }
+
+        .feature-list li {
+            background: white;
+            margin: 10px 0;
             padding: 15px;
             border-radius: 8px;
             border-left: 4px solid #4CAF50;
-            margin: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        
-        .feature-list {
-            list-style: none;
-            padding: 0;
-            margin: 15px 0;
-        }
-        
-        .feature-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-            position: relative;
-            padding-left: 25px;
-        }
-        
-        .feature-list li:before {
-            content: "•";
+
+        .feature-list li::before {
+            content: '✓';
             color: #4CAF50;
             font-weight: bold;
-            position: absolute;
-            left: 0;
-            font-size: 1.2em;
+            margin-right: 10px;
         }
-        
-        .feature-list li:last-child {
-            border-bottom: none;
-        }
-        
-		.survey-callout {
-			background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-			border: 1px solid #ffc107;
-			border-radius: 10px;
-			padding: 25px;
-			margin: 15px 0;
-			text-align: center;
-			box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-		}
 
-		.survey-callout h4 {
-			margin-bottom: 15px;
-			color: #333;
-		}
-
-		.survey-benefits {
-			display: flex;
-			justify-content: center;
-			gap: 30px;
-			margin: 15px 0;
-			flex-wrap: wrap;
-		}
-
-		.benefit-item {
-			background: rgba(255,255,255,0.7);
-			padding: 10px 15px;
-			border-radius: 20px;
-			font-size: 0.95em;
-			color: #333;
-			box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-		}
-        
-        .survey-link {
+        .cta-button {
             display: inline-block;
-            background: #4CAF50;
+            background: linear-gradient(135deg, #4CAF50, #45a049);
             color: white;
             padding: 12px 25px;
             text-decoration: none;
             border-radius: 25px;
-            margin: 10px 0;
-            font-weight: bold;
-            transition: background 0.3s ease;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 10px 10px 10px 0;
         }
-        
-        .survey-link:hover {
-            background: #45a049;
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
             color: white;
         }
-        
-        .sharepoint-box {
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-            border: 1px solid #2196F3;
-            border-radius: 10px;
+
+        .date-highlight {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
             padding: 20px;
-            margin: 15px 0;
-        }
-        
-        .sharepoint-link {
-            word-break: break-all;
-            color: #1976D2;
-            font-size: 0.9em;
-            margin: 10px 0;
-        }
-        
-        .coming-soon-item {
-            background: white;
-            border-left: 4px solid #4CAF50;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        
-        .coming-soon-item h4 {
-            margin: 0 0 8px 0;
-            color: #333;
-        }
-        
-        .coming-soon-item p {
-            margin: 0;
-            color: #666;
-            font-size: 0.95em;
-        }
-        
-        .conference-section {
-            background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
-            border: 1px solid #9c27b0;
             border-radius: 10px;
-            padding: 20px;
-            margin: 15px 0;
+            text-align: center;
+            margin: 20px 0;
         }
-        
-        .abstract-item {
-            background: white;
+
+        .date-highlight h3 { margin-bottom: 10px; font-size: 1.3em; }
+
+        .contact-info {
+            background: #f8f9fa;
             padding: 15px;
-            margin: 10px 0;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .abstract-item h4 {
-            margin: 0 0 8px 0;
-            color: #333;
-        }
-        
-        .abstract-title {
-            font-style: italic;
-            color: #666;
+            margin: 15px 0;
             font-size: 0.95em;
-            line-height: 1.4;
         }
-        
-		.photo-placeholder {
-			text-align: center;
-			margin: 15px 0;
-		}
 
-		.photo-placeholder img {
-			width: 100%;
-			height: auto;
-			max-width: 100%;
-			border-radius: 6px;
-			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-		}
-        
-        .calendar-item {
+        .contact-info strong { color: #4CAF50; }
+
+        .contact-info a, .section a:not(.cta-button) { color: #2e86de; }
+
+        .photo {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 15px 0;
+            display: block;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .stat-card {
             background: white;
-            border-left: 4px solid #4CAF50;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        
-        .calendar-item h4 {
-            margin: 0 0 5px 0;
-            color: #333;
-            font-size: 1.1em;
-        }
-        
-        .calendar-date {
-            font-weight: bold;
-            color: #4CAF50;
-            margin-bottom: 5px;
-        }
-        
-        .calendar-details {
-            color: #666;
-            font-size: 0.95em;
-        }
-        
-        .feedback-section {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border: 2px solid #4CAF50;
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
-            margin: 30px 0;
-        }
-        
-        .feedback-section h3 {
-            color: #333;
-            margin-bottom: 15px;
-        }
-        
-		.qr-placeholder {
-			margin: 15px auto;
-			text-align: center;
-			max-width: 200px;
-		}
-
-		.qr-placeholder img {
-			width: 150px;
-			height: 150px;
-			background: white;
-			padding: 10px;
-			border-radius: 10px;
-			box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-		}
-        
-        .footer {
-            background: #333;
-            color: white;
+            border-radius: 10px;
             padding: 20px;
             text-align: center;
+            border-top: 4px solid #4CAF50;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        
-        .footer p {
-            margin: 5px 0;
+
+        .stat-number { font-size: 2.2em; font-weight: 700; color: #4CAF50; line-height: 1.2; }
+        .stat-label { font-weight: 600; margin-top: 5px; }
+        .stat-detail { font-size: 0.9em; color: #666; margin-top: 5px; }
+
+        .audit-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        
-        @media (max-width: 768px) {
-            .newsletter-container {
-                margin: 10px;
-                border-radius: 10px;
-            }
-            
-            .content {
-                padding: 20px;
-            }
-            
-            .header {
-                padding: 20px;
-            }
-            
-            .header h1 {
-                font-size: 2em;
-            }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
+
+        .audit-table th {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            padding: 12px;
+            font-size: 0.95em;
+        }
+
+        .audit-table td { padding: 12px; text-align: center; border-bottom: 1px solid #eee; }
+        .audit-table td:first-child { font-weight: 600; }
+        .audit-table tr:last-child td { background: #e8f5e9; font-weight: 600; }
+
+        .poster-year {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        .footer { background: #333; color: white; padding: 30px; text-align: center; }
+
+        .feedback-section {
+            background: linear-gradient(135deg, #ff7b7b, #ff5757);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .feedback-section h3 { margin-bottom: 15px; }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 2em; }
+            .content { padding: 20px; }
+            .section { padding: 20px; }
+            .audit-table th, .audit-table td { padding: 8px 5px; font-size: 0.85em; }
         }
     </style>
 </head>
@@ -443,217 +258,236 @@
         <div class="header">
             <h1>🌱 Fertility Preservation Newsletter</h1>
             <p class="subtitle">Advancing Care, Preserving Hope</p>
-            <div class="badge">3rd Edition • November 2025</div>
-			<br><br>
-			<p><b>Program medical leads:</b> Dr. Kriti Kumar, Dr. Jennia Michaeli.<br><b>Project manager:</b> Julie Chiba Branson.</p>
+            <div class="badge">October 2026</div>
         </div>
-        
-        <div class="content">
-            <!-- Introduction Section -->
-            <div class="intro">
-                <p>🚀 <strong>Big News!</strong> Following our successful solid tumor pilot launch in May, we're thrilled to expand the <strong>ovary preservation pathway</strong> to <strong>all divisions starting November 10!</strong></p>
-                
-                <p><strong>Ready to Get Started?</strong></p>
-                <ul>
-                    <li>Materials shared at all protocol rounds</li>
-                    <li>Comprehensive tip sheets available on SharePoint and in your clinics</li>
-                    <li>Virtual and physical brochure: "Fertility Preservation for Individuals with Ovaries"</li>
-                    <li>Division-specific guidance for every team</li>
-                </ul>
-                
-				<div class="tip-sheet-grid">
-					<img src="img/57ce9c45-bd21-4bb8-8897-5ca8171d5e92-0.jpg" alt="Tip Sheet 1">
-					<img src="img/88fe497c-0784-44ff-92d5-e31a48c47b61-0.jpg" alt="Tip Sheet 2">
-					<img src="img/2968e258-d482-4717-83e2-f167f2c40fe0-0.jpg" alt="Tip Sheet 3">
-					<img src="img/d7da196f-6dbf-448a-a4a0-d0e24c53041f-0.jpg" alt="Tip Sheet 4">
-				</div>
-                
-                <p style="text-align: center;">Implementation has never been easier!<br>✨ <strong>Join us in transforming patient care</strong> – you have everything you need.</p>
-            </div>
-            
-            <!-- Solid Tumor Launch Results -->
-            <div class="section">
-                <div class="section-header">
-                    <div class="section-icon">📊</div>
-                    <h2>Solid Tumor Launch - Impressive Results!</h2>
-                </div>
-                
-                <div class="highlight-box">
-                    <p><strong>By the Numbers:</strong></p>
-                </div>
-                
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">83%</div>
-                        <div class="stat-label">PAG consultation completion rate (6/7 patients)</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">50%</div>
-                        <div class="stat-label">Successful OTC procedures (3/6 patients)</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">2</div>
-                        <div class="stat-label">Additional OTC procedures completed pre-BMT during remission</div>
-                    </div>
-                </div>
-                <div class="highlight-box">
-                    <p><strong>Growing:</strong> Pipeline of referrals with procedures scheduled</p>
-                </div>
-                
-                <div class="highlight-box">
-                    <p><strong>Key Achievement:</strong> Seamless ovary preservation pathway through multidisciplinary collaborative effort</p>
-                </div>
-            </div>
-            
-            <!-- Sperm Preservation Pathway -->
-            <div class="section">
-                <div class="section-header">
-                    <div class="section-icon">🤝</div>
-                    <h2>Sperm Preservation Pathway - Your Voice Matters!</h2>
-                </div>
-                
-                <p><strong>Help Shape Our Approach:</strong><br>
-                We're developing best practices for fertility preservation discussions with adolescent males and need YOUR expertise!</p>
-                
-				<div class="survey-callout">
-					<h4>Quick Staff Survey (2 minutes):</h4>
-					<div class="survey-benefits">
-						<div class="benefit-item">💬 Share your insights on sperm banking conversations</div>
-						<div class="benefit-item">💳 Get a <strong>$5 EverythingCard</strong> for your time</div>
-					</div>
-					<a href="https://redcap.link/h747kcgb" class="survey-link">Take Survey Now</a>
-				</div>
-                
-                <div class="highlight-box">
-                    <p><strong>Patient Perspectives Needed:</strong><br>
-                    Looking for insights from teens assigned male at birth about fertility education</p>
-                    
-                    <div class="qr-placeholder">
-                        <img src="img/QR1.png" alt="QR Code 1">
-                    </div>
-                </div>
-                
-                <p><strong>Questions?</strong> Dr. Natalie Pitch: <a href="mailto:Natalie.pitch@sickkids.ca">Natalie.pitch@sickkids.ca</a></p>
-            </div>
-            
-            <!-- SharePoint Section -->
-            <div class="section">
-                <div class="section-header">
-                    <div class="section-icon">💻</div>
-                    <h2>New SharePoint Hub - Your One-Stop Resource!</h2>
-                </div>
-                
-                <div class="photo-placeholder">
-                    <img src="img/SharePoint.png" alt="SharePoint"> 
-                </div>
-                
-                <div class="sharepoint-box">
-                    <p><strong>🔗 Quick Access:</strong></p>
-                    <div class="sharepoint-link">
-                        <a href="https://sickkidsca.sharepoint.com/sites/HO/SitePages/Fertility-Preservation-Program.aspx">sickkidsca.sharepoint.com/sites/HO/SitePages/Fertility-Preservation-Program.aspx</a>
-                    </div>
-                    
-                    <p><strong>What You'll Find:</strong></p>
-                    <ul class="feature-list">
-                        <li><strong>Research & QI Projects</strong> - See what's in progress, collaborate, avoid duplication</li>
-                        <li><strong>Clinical Tools</strong> - Ready-to-use tip sheets individualized for every division</li>
-                        <li><strong>Resources & Updates</strong> - Everything you need in one convenient location</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Coming Soon -->
-            <div class="section">
-                <div class="section-header">
-                    <div class="section-icon">🔮</div>
-                    <h2>Exciting Developments on the Horizon!</h2>
-                </div>
-                
-                <div class="coming-soon-item">
-                    <h4>📋 Policy & Procedure Document</h4>
-                    <p>Fertility Preservation in Individuals with Ovaries - final approval stage, SharePoint upload coming soon!</p>
-                </div>
-                
-                <div class="coming-soon-item">
-                    <h4>🌐 SickKids Website Launch</h4>
-                    <p>Dedicated Fertility Preservation webpage going live soon</p>
-                </div>
-                
-                <div class="coming-soon-item">
-                    <h4>🤔 Ethics Working Group - Join Us!</h4>
-                    <p>Help shape ethical frameworks for fertility preservation<br>
-                    <strong>Interested?</strong> Email Julie (<a href="mailto:Julie.chibabranson@sickkids.ca">Julie.chibabranson@sickkids.ca</a>) or Kriti (<a href="mailto:kriti.kumar@sickkids.ca">kriti.kumar@sickkids.ca</a>)</p>
-                </div>
-            </div>
-            
-            <!-- Conference Section -->
-            <div class="section">
-                <div class="section-header">
-                    <div class="section-icon">🏆</div>
-                    <h2>Oncofertility Consortium 2025 in Detroit</h2>
-                </div>
-                
-                <div class="conference-section">
-                    <h3>SickKids Program Highlights:</h3>
-                    <p>Our program leads presented <strong>2 abstracts</strong> and received very positive feedback!</p>
-                    
-					<div class="abstract-item">
-						<h4>🔬 Abstract 1:</h4>
-						<div class="abstract-title">"Development of an ovarian tissue cryopreservation care pathway as a part of a comprehensive fertility preservation program"</div>
-						<img src="img/poster1.jpg" alt="Abstract 1 Poster" style="width: 100%; margin-top: 10px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-					</div>
 
-					<div class="abstract-item">
-						<h4>🌐 Abstract 2:</h4>
-						<div class="abstract-title">"Canadian Implementation of Ovarian Tissue Transportation and Centralized Cryobanking -- the Ontario Hub-and-Spoke Model"</div>
-						<img src="img/poster2.jpg" alt="Abstract 2 Poster" style="width: 100%; margin-top: 10px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-					</div>
-                    
-					<div class="photo-placeholder">
-						<img src="img/Jennia_Kriti.jpg" alt="Jennia and Kriti at the conference">
-					</div>
-                    
-                </div>
+        <div class="content">
+            <div class="intro">
+                <p>Welcome to the latest Fertility Preservation Program newsletter! In this edition, we are celebrating program milestones, sharing new clinical and educational resources, highlighting research and quality-improvement work, and inviting you to connect with upcoming opportunities across our community.</p>
             </div>
-            
-            <!-- Calendar Section -->
+
+            <!-- GUIDELINE -->
             <div class="section">
                 <div class="section-header">
-                    <div class="section-icon">📅</div>
-                    <h2>Mark Your Calendars!</h2>
+                    <div class="section-icon icon-guidelines">📋</div>
+                    <h2>Female Fertility Preservation Guideline Now Available</h2>
                 </div>
-                
-                <div class="calendar-item">
-                    <h4>🏥 Haem/Onc Divisional Rounds</h4>
-                    <div class="calendar-date">January 8, 2026 • 8:00-9:00 AM</div>
-                    <div class="calendar-details">Fertility Preservation Program presentation by Dr. Jennia Michaeli and Dr. Kriti Kumar</div>
-                </div>
-                
-                <div class="calendar-item">
-                    <h4>🤝 Next Quarterly Meeting</h4>
-                    <div class="calendar-date">December 15, 2025 • 4:00-5:00 PM</div>
-                    <div class="calendar-details">Hybrid: Teams + PSC 10-14-001 Collaboration Room</div>
+
+                <p><strong><em>Fertility Preservation in Individuals with Ovaries: A Guideline for Haematology/Oncology and Hematopoietic Stem Cell Transplant Patients</em></strong> was released on June 25, 2026.</p>
+
+                <a href="#" class="cta-button" target="_blank">View the Ovarian Fertility Preservation Guideline</a>
+
+                <div class="highlight-box">
+                    <p><strong>Coming Soon:</strong> New Testes guideline!</p>
                 </div>
             </div>
-            
-            <!-- Feedback Section -->
+
+            <!-- P3 SYMPOSIUM -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon icon-event">🎓</div>
+                    <h2>P3 Symposium: Preserving Potential in Pediatric Fertility</h2>
+                </div>
+
+                <h4>Symposium Highlights</h4>
+                <p>Our inaugural symposium, held in the PGRCL on June 4, 2026, welcomed <strong>44 attendees</strong>. The program featured two interactive workshops and two panel discussions.</p>
+
+                <img src="symposium-group.jpg" alt="P3 Symposium attendees group photo" class="photo">
+                <img src="symposium-team.jpg" alt="P3 Symposium organizing team" class="photo">
+
+                <h4>Participant Outcomes</h4>
+                <p>Pre- and post-symposium assessments showed a <strong>significant increase</strong> in participants' self-assessed confidence in fertility preservation risk stratification, available options, and patient conversations.</p>
+
+                <div class="contact-info">
+                    <strong>Explore more:</strong> Check out our fertility preservation webpage and learning hub on About Kids Health!
+                </div>
+
+                <a href="#" class="cta-button" target="_blank">Fertility Preservation Webpage</a>
+                <a href="#" class="cta-button" target="_blank">Fertility Preservation Hub</a>
+            </div>
+
+            <!-- IN THE NEWS -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon icon-news">📰</div>
+                    <h2>We Are in the News!</h2>
+                </div>
+
+                <p>The Toronto Star (Aug. 25, 2026) shared the story of a 12-year-old patient whose future fertility was protected through ovarian tissue cryopreservation at Mount Sinai and SickKids, an option now available to patients as young as 1.</p>
+
+                <img src="news-photo-1.jpg" alt="Program leads featured in the news" class="photo">
+                <img src="news-photo-2.jpg" alt="Patient featured in the news story" class="photo">
+
+                <h4>Read and Share the Story</h4>
+                <ul class="feature-list">
+                    <li><a href="#" target="_blank">The story on SickKids.ca</a></li>
+                    <li><a href="#" target="_blank">Instagram</a> • <a href="#" target="_blank">LinkedIn</a> • <a href="#" target="_blank">X</a></li>
+                    <li>MySickKids: <a href="#" target="_blank">Helping paediatric cancer patients protect their future fertility</a></li>
+                    <li><a href="toronto-star-article.pdf" target="_blank">Toronto Star</a></li>
+                    <li><a href="#" target="_blank">CBC News</a></li>
+                </ul>
+            </div>
+
+            <!-- BY THE NUMBERS -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon icon-numbers">📊</div>
+                    <h2>Fertility Preservation by the Numbers</h2>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">16</div>
+                        <div class="stat-label">Ovarian Tissue Cryopreservation</div>
+                        <div class="stat-detail">Procedures completed since the pathway launched in May 2025</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">32</div>
+                        <div class="stat-label">Sperm Banking</div>
+                        <div class="stat-detail">Procedures completed since the pathway launched in 2024</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">9 → 26</div>
+                        <div class="stat-label">AfterCare Referrals</div>
+                        <div class="stat-detail">Before vs. after the AfterCare pathway launched</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SPERM BANKING AUDIT -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon icon-audit">🔍</div>
+                    <h2>Sperm Banking: Chart Audit Results</h2>
+                </div>
+
+                <p>A recent chart audit of fertility preservation (FP) risk, conversations, documentation, and sperm banking procedures for post-pubertal males showed <strong>steady improvement across all areas</strong>.</p>
+
+                <table class="audit-table">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>FP Risk Documentation</th>
+                            <th>FP Conversation</th>
+                            <th>Sperm Banking Referral</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>2023-2024</td><td>59%</td><td>61%</td><td>29%</td></tr>
+                        <tr><td>2024-2025</td><td>74%</td><td>71%</td><td>55%</td></tr>
+                        <tr><td>2025-2026</td><td>81%</td><td>74%</td><td>56%</td></tr>
+                    </tbody>
+                </table>
+
+                <h4>Growing Team Capacity</h4>
+                <p>A wider range of staff disciplines are now leading fertility risk conversations, reflecting increased confidence and capacity across the team. Thank you all for initiating and documenting these conversations, providing excellent fertility preservation care for patients. Overall, the results show strong progress, with some opportunities to further improve the consistency of FP conversations and documentation.</p>
+
+                <div class="highlight-box">
+                    <p><strong>A huge thank-you to Becca Cote</strong> for completing the chart review and championing this important work! 🎉</p>
+                </div>
+            </div>
+
+            <!-- RESEARCH -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon icon-research">🔬</div>
+                    <h2>Research in Action: Advancing Fertility Preservation Care</h2>
+                </div>
+
+                <h4>Poster Presentations</h4>
+
+                <span class="poster-year">2025</span>
+                <ul class="feature-list">
+                    <li><strong>Kriti Kumar</strong> – Preserving Future Fertility for Pediatric Patients with Cancer: Building an Ethical Framework <em>(SickKids Bioethics Week)</em></li>
+                    <li><strong>Kriti Kumar</strong> – Development of an Ovarian Tissue Cryopreservation Care Pathway as Part of a Comprehensive Fertility Preservation Program</li>
+                </ul>
+
+                <span class="poster-year">2026</span>
+                <ul class="feature-list">
+                    <li><strong>Louise Evans</strong> – Improving oncofertility access for childhood cancer survivors: changes in referral patterns after centralized pathway implementation <em>(Department of Paediatrics Research Day 2026; to be presented at IFSP in November)</em></li>
+                    <li><strong>Jenny Chung</strong> – Oncofertility Psychosocial Supports and Services for Children, Adolescents, and Young Adults with Cancer: A Scoping Review</li>
+                    <li><strong>Natalie Pitch</strong> – Preserving Possibility: Perspectives on improving fertility preservation education for adolescent males</li>
+                </ul>
+
+                <h4>Study: Evaluating a Dedicated Oncofertility AfterCare Clinic for Childhood Cancer Survivors</h4>
+                <p>This study will examine the impact of attending a dedicated survivorship fertility clinic.</p>
+                <ul class="feature-list">
+                    <li><strong>Primary objective:</strong> Assess changes in fertility-related concerns</li>
+                    <li><strong>Secondary objectives:</strong> Examine FP procedure uptake, barriers to FP, and interest in psychosocial and peer-support resources</li>
+                </ul>
+                <p><strong>Methods and participants:</strong> Using a pre–post survey design, chart review, and semi-structured interviews, the study will compare participants' reproductive concern scores before and after attending a specialist fertility clinic. Participants will include adolescents and young adults with a history of childhood cancer seen in the POGO AfterCare clinic at SickKids or Princess Margaret Cancer Centre.</p>
+                <div class="contact-info">
+                    <strong>Questions?</strong> Contact Maggie McNeill at <a href="mailto:Maggie.mcneill@sickkids.ca">Maggie.mcneill@sickkids.ca</a>
+                </div>
+
+                <h4>Fertility Preservation Learning Tool for At-Risk Males</h4>
+                <p>We are excited to share that our needs assessment from healthcare providers, patients, and caregivers has been completed. Our research team is developing a learning tool to support education on fertility preservation for at-risk males, which we plan to pilot and evaluate in 2027.</p>
+                <div class="contact-info">
+                    <strong>Questions?</strong> Contact Josh Stanley at <a href="mailto:joshua.stanley@sickkids.ca">joshua.stanley@sickkids.ca</a> or Natalie Pitch at <a href="mailto:natalie.pitch@sickkids.ca">natalie.pitch@sickkids.ca</a>
+                </div>
+
+                <p>Find more information on our research and quality-improvement work here:</p>
+                <a href="#" class="cta-button" target="_blank">Fertility Preservation Research and Posters</a>
+            </div>
+
+            <!-- GET INVOLVED -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon icon-meeting">👥</div>
+                    <h2>Get Involved</h2>
+                </div>
+
+                <h4>Psychosocial Working Group: Members Wanted</h4>
+                <p>Recruitment is underway for the Fertility Preservation Psychosocial Working Group. If you are interested in contributing to this work, please contact:</p>
+                <div class="contact-info">
+                    <strong>Benita:</strong> <a href="mailto:Benita.yi@sickkids.ca">Benita.yi@sickkids.ca</a><br>
+                    <strong>Julie:</strong> <a href="mailto:Julie.chibabranson@sickkids.ca">Julie.chibabranson@sickkids.ca</a><br>
+                    <strong>Kriti:</strong> <a href="mailto:kriti.kumar@sickkids.ca">kriti.kumar@sickkids.ca</a>
+                </div>
+
+                <h4>Opportunities to Join Our Working Groups</h4>
+                <p>Our working groups help strengthen and advance our work. We welcome new members to join any of the following:</p>
+                <ul class="feature-list">
+                    <li>Education</li>
+                    <li>Survivorship</li>
+                    <li>Care Pathway</li>
+                    <li>Ethics</li>
+                    <li>Non-Oncology</li>
+                </ul>
+                <div class="contact-info">
+                    <strong>Interested?</strong> Connect with Kriti or Julie!
+                </div>
+
+                <div class="date-highlight">
+                    <h3>Next Quarterly Meeting</h3>
+                    <p><strong>October 26, 2026 • 4:00-5:00 PM</strong></p>
+                    <p>Hybrid: Teams + PSC 10-14-001 Collaboration Room</p>
+                </div>
+            </div>
+
+            <!-- FEEDBACK -->
             <div class="feedback-section">
                 <h3>💬 We Want to Hear From You!</h3>
                 <p>Your feedback drives our continuous improvement. Share your thoughts, suggestions, and experiences with us.</p>
-                
-                <div style="margin: 20px 0;">
-                    <p style="margin: 0; font-size: 1.1em;"><strong>Quick & Easy Feedback</strong></p>
-                    <p style="margin: 5px 0 0 0; font-size: 0.95em; opacity: 0.9;">Scan the QR code with your phone camera or reach out directly to help us serve you better!</p>
-                </div>
-                
-                <div class="qr-placeholder">
-                    <img src="img/QR2.png" alt="QR Code 2">
+
+                <div style="display: flex; align-items: center; justify-content: center; gap: 30px; margin: 20px 0; flex-wrap: wrap;">
+                    <div style="text-align: center;">
+                        <div style="width: 140px; height: 140px; background: white; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; padding: 10px;">
+                            <img src="feedback-qr.png" alt="QR Code for Feedback" style="width: 120px; height: 120px; object-fit: contain;">
+                        </div>
+                        <p style="margin: 0; font-size: 0.9em; opacity: 0.9;"><strong>Scan to share feedback</strong></p>
+                    </div>
+
+                    <div style="text-align: center; max-width: 300px;">
+                        <p style="margin: 0; font-size: 1.1em;"><strong>Quick &amp; Easy Feedback</strong></p>
+                        <p style="margin: 5px 0 0 0; font-size: 0.95em; opacity: 0.9;">Scan the QR code with your phone camera or reach out directly to help us serve you better!</p>
+                    </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="footer">
-            <p>© 2025 Fertility Preservation Program | SickKids</p>
+            <p>© 2026 Fertility Preservation Program | SickKids</p>
             <p>Together, we're preserving hope and advancing fertility care</p>
         </div>
     </div>
